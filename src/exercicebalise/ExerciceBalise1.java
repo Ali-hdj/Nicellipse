@@ -33,9 +33,15 @@ public class ExerciceBalise1 {
 		balise2.setSize(40,40);
 		balise3.setSize(40,40);
 		
-		balise1.setDeplacementPolicy(new DeplHorizontal(0, 600));
-		balise2.setDeplacementPolicy(new DeplHorizontal(0, 600));
-		balise3.setDeplacementPolicy(new DeplHorizontal(0, 600));
+		DeplCollect dp1=new DeplCollect();
+		dp1.ajouterDeplacement(new DeplHorizontal(0, 600));
+		dp1.ajouterDeplacement(new DeplVertical(0, 600));
+		dp1.ajouterDeplacement(new DeplHorizontal(0, 200));
+		
+		dp1.ajouterDeplacement(new DeptSynchro(0, 0));
+		balise1.setDeplacementPolicy(dp1);
+		balise2.setDeplacementPolicy(dp1);
+		balise3.setDeplacementPolicy(dp1);
 		
 		
 		space.setBackground(Color.lightGray);
