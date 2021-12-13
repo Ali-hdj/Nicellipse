@@ -1,15 +1,17 @@
 package exercicebalise;
 
-import nicellipse.component.NiRectangle;
 import java.awt.Point;
 
-public class Balise extends NiRectangle{
+import nicellipse.component.NiRectangle;
 
+public class Satellite  extends NiRectangle{
+
+	
 	private Deplacement d;
 	private Point position;
 	
-	public Balise(int x,int y) {
-		position = new Point(x, y);
+	public Satellite() {
+		position = new Point(0, 10);
 	}
 	
 	public void setDeplacementPolicy(Deplacement d) {
