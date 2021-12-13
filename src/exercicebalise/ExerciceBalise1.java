@@ -8,7 +8,7 @@ import nicellipse.component.NiSpace;
 
 public class ExerciceBalise1 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		NiSpace space = new NiSpace("Exercice balise", new Dimension(200, 150));
 		Balise balise = new Balise();
 		space.setBackground(Color.lightGray);
@@ -21,6 +21,7 @@ public class ExerciceBalise1 {
 		
 		while (true) {
 			balise.move();
+			Thread.sleep(20);
 		}
 	}
 
