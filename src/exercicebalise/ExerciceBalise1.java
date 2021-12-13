@@ -34,13 +34,22 @@ public class ExerciceBalise1 {
 		balise3.setSize(40,40);
 		
 		DeplCollect dp1=new DeplCollect();
+		DeplCollect dp2=new DeplCollect();
 		dp1.ajouterDeplacement(new DeplHorizontal(0, 600));
-		dp1.ajouterDeplacement(new DeplVertical(0, 600));
-		dp1.ajouterDeplacement(new DeplHorizontal(0, 200));
+		dp1.ajouterDeplacement(new DeplVertical(0,160));
+		dp1.ajouterDeplacement(new DeplHorizontal(0, 400));
 		
+		dp2.ajouterDeplacement(new DeplVertical(60,160));
+		dp2.ajouterDeplacement(new DeplHorizontal(30, 600));
+		dp2.ajouterDeplacement(new DeplVertical(50,160));
+		dp2.ajouterDeplacement(new DeplHorizontal(0, 400));
+		dp2.ajouterDeplacement(new DeptSynchro(0, 0));
 		dp1.ajouterDeplacement(new DeptSynchro(0, 0));
+		dp2.ajouterDeplacement(new DeptSynchro(0, 0));
+		dp1.ajouterDeplacement(new DeptSynchro(0, 0));
+		
 		balise1.setDeplacementPolicy(dp1);
-		balise2.setDeplacementPolicy(dp1);
+		balise2.setDeplacementPolicy(dp2);
 		balise3.setDeplacementPolicy(dp1);
 		
 		

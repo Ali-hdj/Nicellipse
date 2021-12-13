@@ -33,7 +33,9 @@ public class DeplCollect  implements Deplacement {
 	if(compteur>this.tempDepl)
 	{
 		numDepl++;
+		this.compteur=0;
 	}
+	
 	
 	
 	if(numDepl>this.listDeplacement.size()-1)
